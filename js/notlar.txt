@@ -1,0 +1,8 @@
+var:yeni modelle kullanılmamaya başlandı, yerine let ve const kullanılamaktadır.
+ var serverName="kodlyoruz.org"; 
+ console.log(serverName);
+-----------------------------------------
+let:
+ let password; ya da 
+ let password="1234";
+const:
