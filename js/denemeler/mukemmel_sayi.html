@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="mukemmel_sayi">Mükemmel Sayi</label>
+    <input type="text" id="mukemmel">
+    <button id="kontrol" style="width: 100px; height: 50px;">KONTROL ET</button>
+    <label id="durumNe" style="margin-top: 100px;"></label>
+    
+    <script>
+        var kontrolEt=document.getElementById("kontrol");
+        kontrolEt.onclick=hesaplama;
+        
+        function hesaplama(){
+            var toplam;
+            var sayi=Number(document.getElementById("mukemmel").value);
+        for(var i=1;i<sayi_;i++){
+      if(sayi_%i==0){
+          toplam=toplam+i;
+      }
+    }
+    if(sayi_==toplam){
+        document.getElementById("durumNe").innerHTML=sayi_+" MÜKEMMEL SAYIDIR";
+      }
+      else{
+          document.getElementById("durumNe").innerHTML=sayi_+" MÜKEMMEL SAYI DEĞİLDİR.";
+      }
+    }
+    </script>
+</body>
+</html>

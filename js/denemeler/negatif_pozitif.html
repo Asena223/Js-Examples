@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negatif-Pozitif</title>
+</head>
+<body>
+    <input type="number" id="sayi">
+    <button type="button" id="hesapla" value="Göster" style="width:100px; height:25px; margin-bottom: 10px;">GÖSTER</button>
+    <div id="durumGoster" style="background-color:sandybrown; width: 160px; height: 30px; text-align: center;"></div>
+    <script>
+        var sayiNesne=document.getElementById("sayi");
+        var hesaplaBtn=document.getElementById("hesapla");
+         
+        hesaplaBtn.onclick=islem;
+        function islem(){
+            var sayi=Number(sayiNesne.value);
+            var durumGoster=document.getElementById("durumGoster");
+            if(sayi<0){
+                durumGoster.innerHTML="SAYI NEGATİFTİR.";
+            }
+            else if(sayi>0){
+                durumGoster.innerHTML="SAYI POZİTİFTİR.";
+            }
+            else{
+                durumGoster.innerHTML="SAYI 0' a EŞİTTİR.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="vize" style="margin-right: 10px;">Vize</label>
+    <input type="text" id="vize"><br><br>
+    <label for="final" style="margin-right: 7px;">Final</label>
+    <input type="text" id="final">
+    <button id="hesapla">HESAPLA</button>
+    <div id="ortalama"></div>
+    <div id="durum"></div>
+    <script>
+        var vize_not=document.getElementById("vize");
+        var final_not=document.getElementById("final");
+        var hesaplaBtn=document.getElementById("hesapla");
+        hesaplaBtn.onclick=islemler;
+        function islemler(){
+            var vize1=Number(vize_not.value);
+            var final1=Number(final_not.value);
+            var ortalamaPuani=document.getElementById("ortalama");
+            var durumGoster=document.getElementById("durum");
+            var ortalamaNot=(vize1*40/100)+(final1*60/100);
+            if(ortalamaNot<50){
+                ortalamaPuani.innerHTML=ortalamaNot;
+                durumGoster.innerHTML="Kaldınız";
+            }
+            else{
+                ortalamaPuani.innerHTML=ortalamaNot;
+                durumGoster.innerHTML="Geçtiniz";
+            }
+        }
+    </script>
+</body>
+</html>
