@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button id="arttir" onclick="arttir();">Arttır</button> -->
+    <!--görüldüğü üzere button hem input ile sağlanabilir, hem de button tagı ile sağlanabilir-->
+    <input type="button" id="arttir" onmouseover="arttir();" value="Arttır" style="width: 100px; height: 100px; background-color:red;" /> <!--button tagının onclick olayına bir fonksiyon tanımlıyorum ve fonksiyon içerisine de ne butonun ne yapması gerektiğini belirtiyorum. böylelikle butona tıklanma gerçekleştiğinde işlem gerçekleşecektir-->
+    <!--eğer butona onmouseover vs türleri verirsem buton üzerine gelince değer değişecektir. -->
+    <button id="azalt" onclick="azalt();" style="width:100px; height:100px; background-color:red; margin: right 50px;">Azalt</button>
+    <input type="button" id="sonuc" style="width:100px; height:100px">
+    <script type="text/javascript">
+        function arttir() {
+            var sonuc1 = document.getElementById("sonuc");
+            sonuc1.value = Number(sonuc1.value) + 1;
+            if(sonuc1.value==5){
+                sonuc1.value =Number(sonuc1.value)+10;
+            }
+        }
+        function azalt() {
+            var sonuc1 = document.getElementById("sonuc");
+            sonuc1.value = Number(sonuc1.value) - 1;
+        }
+    </script>
+</body>
+
+</html>
