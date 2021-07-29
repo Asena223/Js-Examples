@@ -6,3 +6,9 @@ let:
  let password; ya da 
  let password="1234";
 const:
+
+statement: çalıştırılabilir her satırdır.; öncesi tamamen statement olmaktadır.
+
+
+
+
