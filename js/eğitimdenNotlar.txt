@@ -24,5 +24,7 @@ eski sürüm tarayıcılar tarafından da sıkıntı olmasın diye başına -web
 -ms: microsoft için,
 -moz: mozilla fireforks için,
 -o: opera için kullanılmaktadır.
-
+  
+js' de css kodu yazmamız gerekiyorsa;
+ document.body.style.background="yellow"; şeklinde yazabiliriz.
  
