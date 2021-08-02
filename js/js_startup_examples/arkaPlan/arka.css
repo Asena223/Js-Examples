@@ -1,0 +1,21 @@
+#krmz{
+    background: linear-gradient(rgb(182, 10, 10),rgb(50, 4, 0));
+}
+#sari{
+    background: linear-gradient(rgb(84, 84, 3),rgb(255, 255,0));
+}
+#yesil{
+    background: linear-gradient(rgb(46, 165, 46),rgb(15, 61, 15));
+}
+#mavi{
+    background: linear-gradient(rgb(68, 68, 150),rgb(5, 5, 64));
+}
+#container{
+    margin-top: 300px;
+    margin-left: 520px;
+}
+#container button{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
