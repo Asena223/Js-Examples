@@ -1,0 +1,28 @@
+CSS----
+position:absolute özelliği neye verildiyse diğerlerinden bağımsız olmasını sağlamaktadır. referans alacağı nokta right falan verilmediyse sıfırdan(sitenin başlangıç noktasından)başlar.birden fazla div belitirsek bunlar absolute'de üst süte çıkarlar.
+position:static yapısında hepsi de birbirinin peşi sıra dizilir. Yani alt alta
+position:relative kendinden önce gelen nesneye bağımlıdır. static gibidir. ama buna ek olarak top,left uygulayabiliriz. kutular üste üste olsun istersek z-index kullanırız. altta kalacak olana küçük değer, üstte kalacak olana büyük değer girilir.
+ relative kendinden önce gelen nesnenin sonuna kendini iliştirmektedir.
+position:sticky nesnelerin belli bir noktaya kadar kaymalarını sağlar, belli bir noktadan sonra ekranda sabit kalmalarını sağlamaktadır.menünün sürekli üst tarafta sabit kalmasını sağlayabiliriz.
+position:fixed belli bir alana çakılı kalmasını sağlamaktadır.ama görünsün istemiyorsak visibility:hidden veriririz
+div içerisine yazılan yazıların ekranda görünmemesini sağlamak için overflow:hidden, overflow:scroll vs. kullanabiliriz.
+
+kapsayıcı div içinde bir tane daha div kullanmak istiyorsak: kapsayıcı div relative, içindeki div ise absolute olmalıdır ve böylelikle içteki div kapsayıcı divin başlangıç noktasından başlamaktadır.
+
+background:rgba(100,100,100,0.5) burada 0.5 saydamlığı göstermektedir.arka planda resim falan varsa böylelikle görünür.
+renkler arası yumuşak geçiş sağlamak için gradient kullanılmaktadır.
+  background:linear-gradient(yellow,black,purple); 
+  renk geçişlerine yön vermek için ise to right kullanılır.
+  background:linear-gradient(to right,yellow,black,purple); to right, to left, to top, to buttom, to top right vs.
+  to right vs.yerine derece de verebiliriz mesela 45deg gibi
+renklerin nereden başlayacaklarını da belirleyebilmekteyiz bunu da;
+  background:linear-gradient(45deg,yellow 45%, red 80%)
+şeklinde kullanılmaktadır.
+
+eski sürüm tarayıcılar tarafından da sıkıntı olmasın diye başına -webkit-linear şeklinde devam etmektedir.
+-webkit: chrome ve safari için,
+-ms: microsoft için,
+-moz: mozilla fireforks için,
+-o: opera için kullanılmaktadır.
+
+ 
