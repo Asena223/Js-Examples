@@ -1,0 +1,14 @@
+#hesapla{
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    background:linear-gradient(to top right,rgb(27, 175, 146) 45%, rgb(62, 9, 238) 80%);
+    font-weight: bold;
+}
+#sonuc{
+    width: 270px;
+    height: 30px;
+    background: linear-gradient(rgb(158, 173, 175),rgb(127, 127, 172));
+    text-align: center;
+    color: #fff;
+}
