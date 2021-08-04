@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.denemeCssAlani{
+    font-size: 80px;
+    background-color:rgba(221, 136, 8, 0.898);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <div id="egitim">Merhabalar, Fü' de Yazılım mühendisliği 3.sınıf öğrencisiyim...</div>
+
+    <div id="hobiler">Resim çizmeyi, spor yapmayı ve müzik dinlemeyi çok severim...</div><br>
+
+    <button id="degis" onclick="tekOzellikDegis()">Sadece Bir Tane Css Kodu Uygula</button>
+
+    <button id="cssUygula" onclick="classCssUygula()">Css Classı Uygulanacak ve Böylelikle Bir Anda Birden Fazla Özelliği Değişecektir</button>
+
+    <script>
+        function tekOzellikDegis() {
+            document.getElementById("egitim").style.color="red"; //burada id'si eğitim olana sadece style'ın color özelliği uygulanacaktır.
+        }
+        function classCssUygula(){
+            document.getElementById("hobiler").className="denemeCssAlani";//burada id'si verilene birden fazla style özelliği eklemek istedim bu yüzden className kullandım ve css classımın adını atadım. Böylelikle style alanında oluşturmuş olduğum class css'teki özelliklerin hepsini tek seferde id'me uyguladım.
+        }
+
+    </script>
+</body>
+</html>
