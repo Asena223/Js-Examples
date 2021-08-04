@@ -6,7 +6,7 @@ position:relative kendinden önce gelen nesneye bağımlıdır. static gibidir. 
 position:sticky nesnelerin belli bir noktaya kadar kaymalarını sağlar, belli bir noktadan sonra ekranda sabit kalmalarını sağlamaktadır.menünün sürekli üst tarafta sabit kalmasını sağlayabiliriz.
 position:fixed belli bir alana çakılı kalmasını sağlamaktadır.ama görünsün istemiyorsak visibility:hidden veriririz
 div içerisine yazılan yazıların ekranda görünmemesini sağlamak için overflow:hidden, overflow:scroll vs. kullanabiliriz.
-
+--------------------
 kapsayıcı div içinde bir tane daha div kullanmak istiyorsak: kapsayıcı div relative, içindeki div ise absolute olmalıdır ve böylelikle içteki div kapsayıcı divin başlangıç noktasından başlamaktadır.
 
 background:rgba(100,100,100,0.5) burada 0.5 saydamlığı göstermektedir.arka planda resim falan varsa böylelikle görünür.
@@ -18,13 +18,92 @@ renkler arası yumuşak geçiş sağlamak için gradient kullanılmaktadır.
 renklerin nereden başlayacaklarını da belirleyebilmekteyiz bunu da;
   background:linear-gradient(45deg,yellow 45%, red 80%)
 şeklinde kullanılmaktadır.
-
+----------------------
 eski sürüm tarayıcılar tarafından da sıkıntı olmasın diye başına -webkit-linear şeklinde devam etmektedir.
 -webkit: chrome ve safari için,
 -ms: microsoft için,
 -moz: mozilla fireforks için,
 -o: opera için kullanılmaktadır.
-  
+  ----------------------
 js' de css kodu yazmamız gerekiyorsa;
  document.body.style.background="yellow"; şeklinde yazabiliriz.
- 
+------------------------
+*getElementById: web sayfasında bulunan HTML etiketlerine ulaşmak için kullanırız. ulaşmak istediğimiz elementin id' sini belirtiriz.
+
+*innerHTML: html alanında id'sini yazdığımız alanın içeriğindeki yazıyı değiştirmek istediğimizde kullanırız.
+
+*getElementsByClassName: id ile birden fazla elemana ulaşmak mümkün değildir. bu durumda html elementlerine verdiğimiz class ile bu metodu kullanıp birden fazla classı aynı olan etiketlere uygulayabiliriz.
+ ama bunda ek olarak class' ı yazmakla beraber, birden fazla olduğu için kaçıncı eleman olduğunu da yazmamız gerekmektedir. örneğin;
+ document.getElementsByClassName("yazi")[0].style.color="red";
+ eğer sayfada aynı classın uygulandığı tüm elemanlara ulaşmak istersek döngü oluşturabiliriz onu da şu şekilde yapabilmekteyiz:
+ function degistir(){
+   var nesne=document.getElementsByClassName("metin");
+   for(var i=0;i<nesne.length;i++){
+    nesne[i].style.color="red";
+  }
+ }
+şeklinde yapabilmekteyiz.
+
+
+*getElementByClassName: eğer name özelliğine göre bir taga ulaşmak istiyorsak kullanırız.
+ var x=getElementByClassName("yazi")[0].value;
+şeklindedir.
+Burada belirtilen ve class alanında belirtilen [] içerisinde verilen değer index numarasını belirtmektedir.
+Ve index numaraları da 0' dan başlamaktadır.
+-------------------------
+Form ve nesne adları kullanılarak form elemanlarının değerlerine ulaşmak için formunAdı.ulaşmakİstediğimizMetinKutusununAdı.value şeklindedir. Örneğin;
+  var deneme=document.formName.textName.value; şeklinde olmaktadır.
+-------------------------
+Eğer toplama vs. yapmak istiyorsak parseInt kullanmalıyız.Örneğin kutuya girilen değeri 1 arttırıp kutu2' nin değerini a değerine eşitledim;
+ var a=parseInt(document.getElementById("kutu1").value);
+ a=a+1
+ document.getElementById("kutu2").value=a;
+-------------------------
+HTML elementlerine css classları da ekleyebiliriz..Örneğin;
+ document.getElementById("elemanId").className="cssClassAdi";
+
+zaten css class uygulanmışsa yeni eklemek için;
+document.getElementById("elemanId").className+="yeniClassinAdi"; şeklindedir.
+--------------------------
+Javascript ile html etiketlerinin özelliklerini değiştirebiliriz. 
+*Parametre değerini elde etmek için getAttribute;
+    document.getElementById("elemanId").getAttribute("parametreAdi");
+*Parametre değerini değiştirmek için ise setAttribute metodu kullanılr;
+    document.getElementById("elemanId").setAttribute("parametreAdi","yeniDeger");
+*id' si verilen tablonun özelliklerini js ile de değişebilmekteyiz;
+    document.getElementById("tablo").setAttribute("width","500");
+*ya da a etiketinin bağlantısını değiştirebiliriz;
+    document.getElementById("link1").setAttribute("href","yenibağlantı");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
