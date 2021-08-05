@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            height: auto;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <table border="2px" width="500px" id="table" bgcolor="#43ff12">
+        <tr>
+            <th>İsim</th>
+            <th>Soyisim</th>
+            <th>Yaş</th>
+        </tr>
+        <tr>
+            <td>Emine</td>
+            <td>Küçük</td>
+            <td class="yas">21</td>
+        </tr>
+        <tr>
+            <td>Asena</td>
+            <td>Küçük</td>
+            <td class="yas">23</td>
+        </tr>
+    </table><br>
+    <button id="btngenislik" onclick="genislikNe()">Genişliği Getir</button>
+    <button id="arkaRenk" onclick="arkaRenk()">Arka Plan Rengini Değiştir</button>
+    <button id="gnsArttir" onclick="genislikArttir()">Genişliği 100 px Arttır</button>
+    <div id="genisliknedir"></div>
+    <div id="yeniGenislik"></div>
+    <script>
+        function genislikNe() {
+            var genislik=document.getElementById("table").getAttribute("width");
+            document.getElementById("genisliknedir").innerHTML=genislik;
+        }
+        function arkaRenk() {
+            var renk=document.getElementById("table").getAttribute("bgcolor");
+            var yeni=document.getElementById("table").setAttribute("bgcolor","red");            
+        }
+        function genislikArttir(){
+            var ygn=parseInt(document.getElementById("table").getAttribute("width"));
+            ygn+=100;
+            document.getElementById("yeniGenislik").innerHTML=ygn+" px";
+        }
+
+    </script>
+</body>
+
+</html>
